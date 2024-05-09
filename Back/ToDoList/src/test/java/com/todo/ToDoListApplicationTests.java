@@ -19,8 +19,8 @@ class ToDoListApplicationTests {
     @Test
     void testJpa() {        
         ToDo t1 = new ToDo();
-        t1.setSubject("프로그래밍 공부하기");
-        t1.setContent("정말 열심히 공부하자");
+        t1.setSubject("프로그래밍 공부하기2");
+        t1.setContent("정말 열심히 공부하자2");
         t1.setCreateDate(LocalDateTime.now());
         this.toDoRepository.save(t1);  // 첫번째 질문 저장
     }
