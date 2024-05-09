@@ -7,11 +7,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.springframework.web.bind.annotation.RestController;
+
 import com.todo.model.ToDo;
 import com.todo.model.ToDoRepository;
 
 import lombok.RequiredArgsConstructor;
 
+@RestController
 @RequiredArgsConstructor
 @Controller
 public class GetList {
