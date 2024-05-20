@@ -1,0 +1,17 @@
+package com.todo.model;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Service
+public class ToDoService {
+	private final ToDoRepository questionRepository;
+
+    public List<TodDo> getList() {
+        return this.questionRepository.findAll();
+    }
+}

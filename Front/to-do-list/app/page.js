@@ -1,5 +1,7 @@
 'use client';
 
+import Link from "next/link" // Link 쓰려면 import 해야함
+
 import { useEffect, useState } from 'react';
 
 export default function Home() {
@@ -27,17 +29,27 @@ export default function Home() {
 
   // 실제로 출력되는 부분
   return (
-    <div>
-      <h1>Data from API:</h1>
-      <br></br>
-      {data.map(item => (
-        <div key={item.id}>
-          <p>Subject: {item.subject}</p>
-          <p>Content: {item.content}</p>
-          <p>Create Date: {item.createDate}</p>
-          <br></br>
-        </div>
-      ))}
+    <div className='flex flex-col items-center justify-center min-h-screen'>
+      <h1 className='text-3xl font-bold text-center mb-8'>할 일 메모</h1>
+      <div className='grid gap-6 w-full max-w-4xl'>
+          {data.map(item => (
+              <div 
+                  key={item.id} 
+                  className='border border-gray-300 p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100'
+              >
+                  <p className='font-semibold mb-2'>Subject: {item.subject}</p>
+                  <p className='mb-2'>Content: {item.content}</p>
+                  <p className='text-gray-500'>Create Date: {item.createDate}</p>
+              </div>
+          ))}
+      </div>
+      <Link href="/createMemo">
+        <button
+          className='mb-8 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors'
+        >
+          + 새 메모
+        </button>
+      </Link>
     </div>
   );
 }
