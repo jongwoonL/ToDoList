@@ -12,11 +12,11 @@ import lombok.RequiredArgsConstructor;
 public class ToDoService {
 	private final ToDoRepository toDoRepository;
 
-    public List<ToDo> getList() {
+    public List<ToDo> getMemos() {
         return this.toDoRepository.findAll();
     }
     
-    public void create(String subject, String content) {
+    public void createMemo(String subject, String content) {
         ToDo t = new ToDo();
         t.setSubject(subject);
         t.setContent(content);

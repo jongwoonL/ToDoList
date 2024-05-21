@@ -10,7 +10,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('/api/getList');
+      const response = await fetch('/api/getMemos');
       // const data1 = await response.text(); // text로 받음
 
       // json으로 보냈으면 json으로 받음

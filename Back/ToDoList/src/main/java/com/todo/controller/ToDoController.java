@@ -24,18 +24,18 @@ public class ToDoController {
 	
 	private final ToDoService toDoService;
 
-    @GetMapping("/GetList")
+    @GetMapping("/getMemos")
     @ResponseBody
     public List<ToDo> list(Model model) {
-    	List<ToDo> toDoList = this.toDoService.getList();
+    	List<ToDo> toDoList = this.toDoService.getMemos();
         model.addAttribute("toDoList", toDoList);
         return toDoList;
     }
     
-    @PostMapping("/saveMemo")
+    @PostMapping("/createMemo")
     @ResponseBody
-    public String saveMemo(@RequestBody MemoRequest memoRequest) {
-        toDoService.create(memoRequest.getTitle(), memoRequest.getContent());
+    public String createMemo(@RequestBody MemoRequest memoRequest) {
+        toDoService.createMemo(memoRequest.getTitle(), memoRequest.getContent());
         return "Memo saved successfully";
     }
 }

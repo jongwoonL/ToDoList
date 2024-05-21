@@ -17,7 +17,7 @@ const CreateMemo = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:8080/saveMemo', {
+      const response = await fetch('http://localhost:8080/createMemo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,6 +27,7 @@ const CreateMemo = () => {
 
       if (response.ok) {
         console.log('Memo saved successfully');
+        window.location.href = 'http://localhost:3000/';
         // Optional: Redirect or display a success message
       } else {
         console.error('Failed to save memo');
