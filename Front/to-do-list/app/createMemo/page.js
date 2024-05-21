@@ -27,6 +27,7 @@ const CreateMemo = () => {
 
       if (response.ok) {
         console.log('Memo saved successfully');
+        alert('메모가 작성되었습니다.');
         window.location.href = 'http://localhost:3000/';
         // Optional: Redirect or display a success message
       } else {
@@ -71,7 +72,7 @@ const CreateMemo = () => {
         <button
           className='px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-700 transition-colors'
         >
-          + 뒤로가기
+          뒤로가기
         </button>
       </Link>
     </div>

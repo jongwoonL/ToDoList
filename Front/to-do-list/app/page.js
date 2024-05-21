@@ -37,12 +37,13 @@ export default function Home() {
                   key={item.id} 
                   className='border border-gray-300 p-6 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-gray-100'
               >
-                  <p className='font-semibold mb-2'>Subject: {item.subject}</p>
-                  <p className='mb-2'>Content: {item.content}</p>
-                  <p className='text-gray-500'>Create Date: {item.createDate}</p>
+                  <p className='font-semibold mb-2'>제목 : {item.subject}</p>
+                  <p className='mb-2'>내용 : {item.content}</p>
+                  <p className='text-gray-500'>작성 날짜 : {item.createDate}</p>
               </div>
           ))}
       </div>
+      <br></br>
       <Link href="/createMemo">
         <button
           className='mb-8 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition-colors'

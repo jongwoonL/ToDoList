@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const response = await fetch('http://localhost:8080/getMemos');
-  const data = await response.json(); // text로 받음
+  const data = await response.json(); // json으로 받음
 
   // const response2 = await fetch('http://localhost:8080/hello2'); // 두 개도 받아보자
   // const data2 = await response2.text();
