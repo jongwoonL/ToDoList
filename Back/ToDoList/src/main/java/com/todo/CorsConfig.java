@@ -1,5 +1,7 @@
 package com.todo;
 
+import org.springframework.lang.NonNull;
+
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -8,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class CorsConfig implements WebMvcConfigurer {
 
     @Override
-    public void addCorsMappings(CorsRegistry registry) {
+    public void addCorsMappings(@NonNull CorsRegistry registry) {
         registry.addMapping("/**") // 모든 요청 경로에 대해
                 .allowedOrigins("http://localhost:3000") // 허용할 프론트엔드 도메인
                 .allowedMethods("GET", "POST", "PUT", "DELETE") // 허용할 HTTP 메서드

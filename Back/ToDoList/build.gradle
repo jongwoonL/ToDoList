@@ -24,17 +24,17 @@ dependencies {
 	
 	// 롬복
 	compileOnly 'org.projectlombok:lombok' 
-    annotationProcessor 'org.projectlombok:lombok'
-    
-    // 데이터베이스 연동
-    runtimeOnly 'com.h2database:h2'
-    
-    // jpa 라이브러리 : jpa로 데이터베이스 관리
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa' 
-    
-    // JUnit 라이브러리 : 리포지토리로 데이터베이스 관리
-    testImplementation 'org.junit.jupiter:junit-jupiter' 
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	annotationProcessor 'org.projectlombok:lombok'
+	
+	// 데이터베이스 연동
+	runtimeOnly 'com.h2database:h2'
+	
+	// jpa 라이브러리 : jpa로 데이터베이스 관리
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' 
+	
+	// JUnit 라이브러리 : 리포지토리로 데이터베이스 관리
+	testImplementation 'org.junit.jupiter:junit-jupiter' 
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.named('test') {
